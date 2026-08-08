@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ===== Asian Cargocare CI — light mode (exact brand hex) =====
+       cream  #FFFCF7  ink #020817  orange #F97316  chip #FFF7ED
+       slate  #64748B  border #E2E8F0                              */
+    --background: 38 100% 98%;            /* #FFFCF7 */
+    --foreground: 222 86% 5%;             /* #020817 */
+    --card: 0 0% 100%;
+    --card-foreground: 222 86% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 86% 5%;
+    --primary: 25 95% 53%;                /* #F97316 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 33 100% 96%;             /* #FFF7ED */
+    --secondary-foreground: 222 86% 5%;
+    --muted: 33 100% 96%;
+    --muted-foreground: 215 16% 47%;      /* #64748B */
+    --accent: 33 100% 96%;
+    --accent-foreground: 25 95% 53%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;                /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 25 95% 53%;
+    --radius: 0.75rem;
+
+    --brand-cream: 38 100% 98%;
+    --brand-ink: 222 86% 5%;
+    --brand-orange: 25 95% 53%;
+    --brand-soft: 33 100% 96%;
+    --brand-footer: 221 39% 11%;          /* #111827 */
+    --footer-link: 220 13% 83%;           /* #D1D5DB */
+  }
+
+  .dark {
+    /* ===== Dark mode derived from the same CI =====
+       page bg = brand ink #020817, cards lifted navy,
+       orange accent untouched                                      */
+    --background: 222 86% 5%;             /* #020817 */
+    --foreground: 210 40% 98%;            /* #F8FAFC */
+    --card: 221 54% 10%;                  /* #0C1428 */
+    --card-foreground: 210 40% 98%;
+    --popover: 221 54% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 25 95% 53%;                /* #F97316 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 44% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 44% 14%;
+    --muted-foreground: 215 20% 65%;      /* #94A3B8 */
+    --accent: 222 44% 14%;
+    --accent-foreground: 25 95% 60%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 40% 18%;                /* #1C2742 */
+    --input: 222 40% 18%;
+    --ring: 25 95% 53%;
+
+    --brand-cream: 222 86% 5%;
+    --brand-ink: 210 40% 98%;
+    --brand-soft: 222 44% 12%;
+    --brand-footer: 225 80% 3%;           /* #01040E */
+    --footer-link: 215 20% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+}

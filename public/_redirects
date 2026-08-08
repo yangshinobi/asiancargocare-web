@@ -1,0 +1,4 @@
+# Cloudflare Pages / Netlify-style SPA fallback.
+# All unknown paths serve index.html so react-router can handle client-side routes.
+# /assets/* and /lovable-uploads/* (if present) are served directly.
+/*    /index.html   200
